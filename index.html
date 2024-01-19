@@ -17,5 +17,18 @@
 </head>
 <body>
   Hello World!
+    <script>
+        // Function to get the original URL path
+        function getOriginalPath() {
+            return window.location.pathname + window.location.search + window.location.hash;
+        }
+
+        // Example usage
+        window.onload = function() {
+            var originalPath = getOriginalPath();
+            console.log("Original URL path was:", originalPath);
+            // Further processing of the path as needed
+        };
+    </script>
 </body>
 </html>
