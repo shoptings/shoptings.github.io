@@ -5,9 +5,9 @@
         ],
         "target": {
             "namespace": "android_app",
-            "package_name": "ai.corca.webview_mock",
+            "package_name": "com.tings.tingsapp",
             "sha256_cert_fingerprints": [
-                "4B:30:5B:A6:79:16:F8:B8:0D:DA:D6:35:81:24:19:73:F7:09:6D:0F:B1:FB:F8:33:1C:4E:3C:CC:E6:A8:A6:25"
+                "8D:82:38:42:25:00:2A:13:49:7E:4E:7F:A2:A0:83:29:27:06:09:6B:22:3A:F0:8B:0B:65:B5:4C:06:C3:EE:D2"
             ]
         }
     }
