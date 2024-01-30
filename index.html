@@ -14,10 +14,67 @@
     <meta property="og:image:width" content="960" />
     <meta property="og:image:height" content="960" />
 
+    <style>
+        body {
+            background-image: url('bg.png'); /* Replace with your image path */
+            background-position: center center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: contain; /* Make sure the whole image is visible */
+            min-height: 100vh; /* Minimum height of body to be full viewport height */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: space-between; /* Space between content */
+        }
+
+        .download-button {
+            width: 300px; /* Specific width of the button */
+            margin: 0 auto; /* Center the button horizontally */
+            padding: 20px 100px; /* Padding inside the button */
+            background-color: #000000; /* Button color */
+            color: white; /* Text color */
+            border: 2px solid white; /* White border */
+            border-radius: 15px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-align: center; /* Center text within the button */
+            text-decoration: none; /* Remove text decoration */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 20%; /* Distance from the bottom */
+            left: 0; /* Align to the left side */
+            right: 0; /* Align to the right side */
+            padding: 0 20px; /* Padding on both sides */
+            text-align: center; /* Center the button */
+        }
+
+    </style>
+
 </head>
 <body>
+    <div class="button-container">
+        <a href="#" id="download-link" class="download-button">Download</a>
+    </div>    
     <script>
-        window.location.href = 'https://www.shoptings.com/';
+        document.getElementById('download-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+    
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // iOS device - replace with your app's URL on the Apple App Store
+                window.location.href = 'https://apps.apple.com/th/app/tings-the-gifts-app/id1640595784';
+            } else if (/android/i.test(userAgent)) {
+                // Android device - replace with your app's URL on Google Play Store
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.tings.tingsapp';
+            } else {
+                // Other device - you might direct them to your website or a landing page
+                window.location.href = 'https://www.shoptings.com/';
+            }
+        });
     </script>
 </body>
 </html>
